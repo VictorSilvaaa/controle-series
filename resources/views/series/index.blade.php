@@ -19,7 +19,7 @@
                     </form>
                     <form action="{{route('series.edit', $serie->id)}}" method="get">
                         @csrf
-                        <button type="submit" class="btn btn-danger btn-sm">{{ svg('feathericon-edit') }}</button>
+                        <button type="submit" class="btn btn-danger btn-sm">@svg('feathericon-edit')</button>
                     </form>
                 </div>
             </li> 
