@@ -32,7 +32,6 @@ class SeriesController extends Controller
     }
     public function store(SeriesFormRequest $request)
     {   
-       
         $serie = $this->repository->add($request);
         
         return redirect()->route('series.index')
