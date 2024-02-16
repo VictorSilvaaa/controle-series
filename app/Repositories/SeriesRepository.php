@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Repositories;
-use App\Models\Series;
+
 use App\Http\Requests\SeriesFormRequest;
+use App\Models\Series;
 
 interface SeriesRepository
 {

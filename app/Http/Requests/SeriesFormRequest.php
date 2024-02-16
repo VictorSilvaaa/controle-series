@@ -8,8 +8,10 @@ class SeriesFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
+     *
+     * @return bool
      */
-    public function authorize(): bool
+    public function authorize()
     {
         return true;
     }
@@ -17,20 +19,12 @@ class SeriesFormRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     * @return array
      */
-    public function rules(): array
+    public function rules()
     {
         return [
-            'nome'=> ['required', 'min:2'],
-            
-        ];
-    }
-
-    public function messages(){
-        return [
-            'nome.required' => 'O campo nome é obrigatório',
-            'nome.min'=> 'o campo nome precisa de pelo menos :min caracteres'
+            'nome' => ['required', 'min:2'],
         ];
     }
 }

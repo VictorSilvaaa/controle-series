@@ -1,24 +1,23 @@
-<x-layout title="Novo Usuário">
-    <form method="post" class="mt-2">
+<x-layout title="Novo usuário">
+    <form method="post">
         @csrf
         <div class="form-group">
-            <label class="form-label" for="name">Nome:</label>
-            <input class="form-control" id="name" type="text" name="name">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" name="name" id="name" class="form-control">
         </div>
 
         <div class="form-group">
-            <label class="form-label" for="email">Email:</label>
-            <input class="form-control" id="email" type="email" name="email">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" name="email" id="email" class="form-control">
         </div>
 
         <div class="form-group">
-            <label class="form-label" for="password">Senha:</label>
-            <input class="form-control" id="password" type="password" name="password">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" name="password" id="password" class="form-control">
         </div>
 
         <button class="btn btn-primary mt-3">
-            Registrar    
+            Registrar
         </button>
     </form>
-
 </x-layout>
