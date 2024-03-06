@@ -10,7 +10,7 @@
                 @if($serie->cover !== null)
                     <img src="{{asset("storage/{$serie->cover}")}}" width="100" alt="" class="img-thumbnail">
                 @else
-                    <img src="{{asset("img/default-cover.png")}}" width="100" alt="" class="img-thumbnail">
+                    <img src="{{asset("assets/img/default-cover.png")}}" width="100" alt="" class="img-thumbnail">
                 @endif
                     
                 @auth <a href="{{ route('seasons.index', $serie->id) }}"> @endauth
