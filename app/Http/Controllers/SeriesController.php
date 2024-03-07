@@ -34,9 +34,8 @@ class SeriesController extends Controller
 
     public function store(SeriesFormRequest $request)
     {   
-        if($request->file('cover') !== null){
-            $coverPath = $request->file('cover')
-            ->store('series_cover', 'public');
+        if($request->hasFile('cover')){
+            $coverPath = $request->file('cover')->store('series_cover', 'public');
             $request->coverPath = $coverPath;
         } 
         
